@@ -5,11 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("OpenShift")
+@RequestMapping("")
 public class OpenShiftController {
 
 	@GetMapping("/GetMessages")
 	public String getMessage() {
-		return "Message From Open Shift  -_-";
+		return "Inner Message From Open Shift  -_-";
+	}
+	
+	@GetMapping("/")
+	public String getMessage2() {
+		return "Root Message From Open Shift  -_-";
 	}
 }
